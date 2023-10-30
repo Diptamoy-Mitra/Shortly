@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
 async function shortenUrl(url) {
   try {
     //https://api.shrtco.de/v2/shorten?
-    const res = await fetch(`https://api.shrtco.de/v2/info?code=${url}`); // https://ismaelc-bitly.p.rapidapi.com/v3/shorten
+    const res = await fetch(`https://api-ssl.bitly.com/v4/shorten?url=${url}`); // https://ismaelc-bitly.p.rapidapi.com/v3/shorten
     const data = await res.json();
     const newUrl = document.createElement("div");
     newUrl.classList.add("item");
